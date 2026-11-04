@@ -8,8 +8,8 @@ Home style and settings-row functions are fixtures; the card feed and Spotify's 
 
     THEOS=/path/to/theos sh harness/home-headings/build.sh
     xcrun simctl install booted harness/home-headings/build/HomeHeadingsHarness.app
-    xcrun simctl launch --terminate-running-process booted com.taurus.homeheadingsharness home-off
-    xcrun simctl launch --terminate-running-process booted com.taurus.homeheadingsharness
+    xcrun simctl launch --terminate-running-process booted com.caffeine.homeheadingsharness home-off
+    xcrun simctl launch --terminate-running-process booted com.caffeine.homeheadingsharness
 
 Wait for both `[headings-test] PASS` lines after each launch. `top-only` tests the frame calculation alone.
 Add `top-off` to either launch to also check the original first-shelf card size with Top picks disabled.

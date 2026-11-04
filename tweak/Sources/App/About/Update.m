@@ -1,11 +1,11 @@
-// GitHub Releases for Taurus. The settings page checks quietly when it opens and caches the result.
+// GitHub Releases for caffeine. The settings page checks quietly when it opens and caches the result.
 #import "Core/SGCore.h"
 #import "About.h"
 
-static NSString *const kGitHubURL = @"https://api.github.com/repos/samj-exe/taurus/releases?per_page=20";
+static NSString *const kGitHubURL = @"https://api.github.com/repos/vexitocin/caffeine/releases?per_page=20";
 NSString *const SGUpdateCheckedNotification = @"spotifyglass.update.checked.notification";
 
-static NSString *const kLatestRelease = @"spotifyglass.update.taurus.latest";
+static NSString *const kLatestRelease = @"spotifyglass.update.caffeine.latest";
 
 static BOOL sg_running;
 
@@ -100,6 +100,6 @@ void SGCheckForUpdate(void) {
             [NSNotificationCenter.defaultCenter postNotificationName:SGUpdateCheckedNotification object:nil];
         });
     };
-    SGLog(@"update check: asking Taurus GitHub Releases");
+    SGLog(@"update check: asking caffeine GitHub Releases");
     ask(kGitHubURL, finish);
 }

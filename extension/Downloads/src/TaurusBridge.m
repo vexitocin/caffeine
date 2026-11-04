@@ -1,5 +1,5 @@
-// The surface Taurus's Downloads page talks to. Taurus's tweak (spotifyglass.dylib) never links this library:
-// it finds SAPTaurusBridge with NSClassFromString, so a build without the companion (another Spotify version,
+// The surface caffeine's Downloads page talks to. caffeine's tweak (spotifyglass.dylib) never links this library:
+// it finds SAPcaffeineBridge with NSClassFromString, so a build without the companion (another Spotify version,
 // no patched executable) simply has no class and the page says downloads are not available.
 #import <Foundation/Foundation.h>
 #import "AudioProbeUI.h"
@@ -9,7 +9,7 @@
 #import "TrackJournal.h"
 
 __attribute__((visibility("default")))
-@interface SAPTaurusBridge : NSObject
+@interface SAPcaffeineBridge : NSObject
 + (NSInteger)interfaceVersion;
 + (NSDictionary *)snapshot;
 + (NSString *)downloadSummary;
@@ -31,7 +31,7 @@ __attribute__((visibility("default")))
 + (void)loadDetails:(BOOL)journal completion:(void (^)(NSDictionary *))completion;
 @end
 
-@implementation SAPTaurusBridge
+@implementation SAPcaffeineBridge
 + (NSInteger)interfaceVersion { return 1; }
 + (NSDictionary *)snapshot { return [SAPSettingsActions snapshot]; }
 + (NSString *)downloadSummary { return SAPTrackDownloadSummary(); }

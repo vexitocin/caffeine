@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-"""Taurus Downloads: patch Spotify 9.1.90 and build the companion library.
+"""caffeine Downloads: patch Spotify 9.1.90 and build the companion library.
 
     build_downloads.py <decrypted Spotify.ipa> --out-ipa <patched.ipa> --out-dylib <SpotifyAudioProbe.dylib>
 
 Three guarded edits to the executable (see the patch_*.py files), each checked against the exact bytes of the
 9.1.90 binary before anything is written, plus the companion library the tweak talks to. cyan injects the
-library afterwards, together with the tweak, so nothing is redirected here: Taurus's audio pipeline keeps the
+library afterwards, together with the tweak, so nothing is redirected here: caffeine's audio pipeline keeps the
 AudioToolbox imports it rebinds itself.
 
 Exit status 3 means this is not the Spotify the edits were verified against; the caller builds without Downloads.
@@ -32,7 +32,7 @@ SOURCE_FILES = [
     "ProbeStubs.c", "ProbeStubs.m", "Diagnostics.m", "Localization.m", "OfflineFlags.m", "WireProto.m",
     "OfflineConfig.m", "TrackJournal.m", "NativeErrorLog.m", "PlayerTrace.m", "NativeOffline.m",
     "TrackDownload.m", "AudioProbeUI.m", "AlbumMetadata.m", "SupportLog.m", "DownloadCompatibility.m",
-    "OfflineDevices.m", "DiagnosticTrace.m", "TracePlatform.m", "NativeKeyTrace.m", "TaurusBridge.m",
+    "OfflineDevices.m", "DiagnosticTrace.m", "TracePlatform.m", "NativeKeyTrace.m", "caffeineBridge.m",
 ]
 
 

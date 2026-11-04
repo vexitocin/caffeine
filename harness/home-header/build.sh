@@ -30,7 +30,7 @@ cat > "$OUT/HomeHeaderHarness.app/Info.plist" <<'PLIST'
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0"><dict>
 <key>CFBundleExecutable</key><string>HomeHeaderHarness</string>
-<key>CFBundleIdentifier</key><string>com.taurus.homeheaderharness</string>
+<key>CFBundleIdentifier</key><string>com.caffeine.homeheaderharness</string>
 <key>CFBundleName</key><string>HomeHeaderHarness</string>
 <key>CFBundleVersion</key><string>1</string>
 <key>CFBundleShortVersionString</key><string>1.0</string>

@@ -240,12 +240,12 @@ static BOOL setText(UILabel *label, NSString *text) {
         _albumControls.delaysContentTouches = NO;
         _albumControls.directionalLockEnabled = YES;
         _albumControls.clipsToBounds = NO;
-        _albumControls.accessibilityIdentifier = @"Taurus.Album.Actions";
+        _albumControls.accessibilityIdentifier = @"caffeine.Album.Actions";
         [self addSubview:_albumControls];
         [_albumControls addSubview:_shuffle];
         _albumDownload = [[SGRMirrorButton alloc] initWithFrame:CGRectZero];
         _albumDownload.fallbackGlyph = [UIImage systemImageNamed:@"arrow.down"];
-        _albumDownload.accessibilityIdentifier = @"Taurus.Album.Download";
+        _albumDownload.accessibilityIdentifier = @"caffeine.Album.Download";
         [_albumControls addSubview:_albumDownload];
         [_albumControls addSubview:_trailing];
     }

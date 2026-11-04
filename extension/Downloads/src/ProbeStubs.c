@@ -1,6 +1,6 @@
 // What the audio probe used to provide, answered "nothing observed".
 //
-// Taurus keeps its own audio pipeline (Shared/Audio/SGAudioPipeline.x rebinds the same AudioToolbox imports the
+// caffeine keeps its own audio pipeline (Shared/Audio/SGAudioPipeline.x rebinds the same AudioToolbox imports the
 // probe redirected), so the probe's import redirect, AVFoundation hooks and WAV capture are not part of this
 // build. The download engine never depended on them; only the diagnostics text read their counters.
 #include <string.h>

@@ -7,8 +7,8 @@ The fixture supplies the Home style preference and unrelated Home/Navbar functio
 
     THEOS=/path/to/theos sh harness/home-header/build.sh
     xcrun simctl install booted harness/home-header/build/HomeHeaderHarness.app
-    xcrun simctl launch --terminate-running-process booted com.taurus.homeheaderharness home-off
-    xcrun simctl launch --terminate-running-process booted com.taurus.homeheaderharness
+    xcrun simctl launch --terminate-running-process booted com.caffeine.homeheaderharness home-off
+    xcrun simctl launch --terminate-running-process booted com.caffeine.homeheaderharness
 
 Wait for the `[header-test] PASS` log after each launch. `HEADER_SOURCE=/path/to/HomeHeader.x` and
 `OUT=/temporary/build` let the same scenario exercise an older hook without changing the checkout.

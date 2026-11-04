@@ -16,5 +16,5 @@ This verifies local hook behavior. An installed-device check is still needed for
 registration, download completion and playback without a connection.
 
 Run `python3 -m unittest discover -s harness/downloads -p 'test_*.py'` for the IPA verifier's metadata
-checks. For a real built IPA, run `python3 extension/Downloads/tools/verify_downloads.py path/to/Taurus.ipa`
+checks. For a real built IPA, run `python3 extension/Downloads/tools/verify_downloads.py path/to/caffeine.ipa`
 to check the companion injection and the executable's actual guarded patch bytes.

@@ -312,7 +312,7 @@ App:
 
     ModSettings.x  the root page and the row that opens it from Spotify's settings
     Pages.m        the Appearance card with Redesigned UI, the Player and Lyrics pages, which Navbar page opens
-    About/         the silent check against Taurus's GitHub Releases and the update alert at the top of Mod Settings;
+    About/         the silent check against caffeine's GitHub Releases and the update alert at the top of Mod Settings;
                    backup, the signing warning and the Mod page with the reset
     Onboarding/    the welcome page over Home on the first launch, with Redesigned UI, offered again from the Mod page
 
@@ -390,7 +390,7 @@ background, mini-player merge/transition toggle, rounded-square artwork option f
 docked pill, and a 0–5 pt progress-bar thickness slider (2 pt by default).
 The Mod page's Clear cached files action removes only named tweak caches; it leaves Spotify downloads,
 Spotify-owned caches, imported lyrics and settings untouched.
-An optional volume slider is off by default, with its thumb hidden if enabled. The taurus settings page
+An optional volume slider is off by default, with its thumb hidden if enabled. The caffeine settings page
 credits @Pulse-Ice for the Fill background treatment adapted from EeveeImmersive.
 Vibrations follows under either look, a card for
 Controls (on until switched off) and one for Music Haptics (off until switched on, with an ⓘ saying it

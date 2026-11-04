@@ -79,8 +79,8 @@ def verify(path):
         if len(companions) != 1:
             raise ValueError("Downloads companion is missing or duplicated")
         companion = archive.read(companions[0])
-        if companion[:4] != b"\xcf\xfa\xed\xfe" or b"SAPTaurusBridge\0" not in companion:
-            raise ValueError("Downloads companion is not the Taurus bridge library")
+        if companion[:4] != b"\xcf\xfa\xed\xfe" or b"SAPcaffeineBridge\0" not in companion:
+            raise ValueError("Downloads companion is not the caffeine bridge library")
         return {"artifact": Path(path).name, "spotify_uuid": uuid,
                 "companion": companions[0], "load_path": loads[0],
                 "offline_restrictions": "verified", "key_mode_zero": "verified",

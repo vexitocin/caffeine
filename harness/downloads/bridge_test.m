@@ -18,7 +18,7 @@ int main(void) { @autoreleasepool {
     version=@"9.1.91";
     NSCAssert([SGDownloadsSummary()containsString:@"9.1.91"],@"unsupported version identified accurately");
     NSCAssert([SGDownloadsUnavailableReason()containsString:@"exact Spotify 9.1.90 build"],@"exact verified build required");
-    Class companion=objc_allocateClassPair(NSObject.class,"SAPTaurusBridge",0);
+    Class companion=objc_allocateClassPair(NSObject.class,"SAPcaffeineBridge",0);
     __block NSInteger interfaceVersion=0;
     class_addMethod(object_getClass(companion),@selector(interfaceVersion),imp_implementationWithBlock(^NSInteger(id self){return interfaceVersion;}),"q@:");
     class_addMethod(object_getClass(companion),@selector(downloadSummary),imp_implementationWithBlock(^NSString *(id self){return @"Download ready";}),"@@:");

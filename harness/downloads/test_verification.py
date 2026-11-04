@@ -31,7 +31,7 @@ class VerificationTests(unittest.TestCase):
             archive.writestr("Payload/Spotify.app/Spotify", executable(load))
             if companion:
                 archive.writestr("Payload/Spotify.app/Frameworks/SpotifyAudioProbe.dylib",
-                                 b"\xcf\xfa\xed\xfe" + (b"SAPTaurusBridge\0" if bridge else b"other library"))
+                                 b"\xcf\xfa\xed\xfe" + (b"SAPcaffeineBridge\0" if bridge else b"other library"))
         return path
 
     def test_load_command_paths_and_invalid_offsets(self):
@@ -46,7 +46,7 @@ class VerificationTests(unittest.TestCase):
             self.assertEqual(verifier.verify(self.fixture(directory))["verification"], "passed")
             for options, error in (({"load": False}, "load the Downloads companion"),
                                    ({"companion": False}, "companion is missing"),
-                                   ({"bridge": False}, "Taurus bridge library")):
+                                   ({"bridge": False}, "caffeine bridge library")):
                 with self.assertRaisesRegex(ValueError, error):
                     verifier.verify(self.fixture(directory, **options))
 

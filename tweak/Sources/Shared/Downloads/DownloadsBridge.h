@@ -1,4 +1,4 @@
-// What the companion library (extension/Downloads/src/TaurusBridge.m) answers to. Found at runtime, never linked.
+// What the companion library (extension/Downloads/src/caffeineBridge.m) answers to. Found at runtime, never linked.
 #import <Foundation/Foundation.h>
 
 @protocol SGDownloadsCompanion <NSObject>

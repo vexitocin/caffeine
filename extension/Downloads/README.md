@@ -3,7 +3,7 @@
 Spotify 9.1.90's own offline downloads, unlocked, and the page in Mod Settings that drives them.
 
 This directory is the **Pixie Download Manager** engine by [Glongq](https://github.com/Glongq/Vitrine-Pixie)
-(v1.2, source pinned to Spotify 9.1.90), taken from Vitrine-Pixie and trimmed for Taurus. It is licensed
+(v1.2, source pinned to Spotify 9.1.90), taken from Vitrine-Pixie and trimmed for caffeine. It is licensed
 GPL-3.0 (`LICENSE-Pixie-GPL-3.0`); its notices stay as they are.
 
     src/      the companion library, built into SpotifyAudioProbe.dylib and injected beside the tweak
@@ -23,16 +23,16 @@ GPL-3.0 (`LICENSE-Pixie-GPL-3.0`); its notices stay as they are.
 Pass `--no-downloads` to `pipeline.sh` to skip all of it.
 
 The pipeline verifies Downloads in the finished IPA whenever it includes them. To check an existing IPA,
-run `python3 extension/Downloads/tools/verify_downloads.py path/to/Taurus.ipa`. It verifies the companion
+run `python3 extension/Downloads/tools/verify_downloads.py path/to/caffeine.ipa`. It verifies the companion
 and its load command, and compares all guarded patch entries and trampolines against the expected bytes.
 Run local configuration and packaging regression checks with
 `bash harness/downloads/build.sh` and `python3 -m unittest discover -s harness/downloads -p 'test_*.py'`.
 
 ## What changed from Vitrine-Pixie
 
-- The settings screens are gone; Taurus draws its own in `tweak/Sources/Shared/Downloads/`. The tweak never
-  links this library: it finds `SAPTaurusBridge` (`src/TaurusBridge.m`) by name at runtime.
-- The AudioToolbox import redirect, the AVFoundation hooks and the WAV capture are gone. Taurus's
+- The settings screens are gone; caffeine draws its own in `tweak/Sources/Shared/Downloads/`. The tweak never
+  links this library: it finds `SAPcaffeineBridge` (`src/caffeineBridge.m`) by name at runtime.
+- The AudioToolbox import redirect, the AVFoundation hooks and the WAV capture are gone. caffeine's
   `Shared/Audio/SGAudioPipeline.x` rebinds the same imports, and downloading never used them. `ProbeStubs.*`
   answers what the diagnostics still read. The "Audio diagnostics" page went with them.
 - Jailbreak (DEB) support is not included.
